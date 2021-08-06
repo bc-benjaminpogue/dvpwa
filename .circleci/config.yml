@@ -7,5 +7,4 @@ workflows:
   sast-scan:
     jobs:
       - security/cx-scan:
-          exclusion_regex: '\.circleci/.*,config/.*,migrations/.*,sqli/static/.*,\.gitignore,docker-compose\.yml,Dockerfile\.app,Dockerfile\.db,LICENSE,README\.rst,recreate\.sh,requirements\.txt'
           context: Checkmarx Access
