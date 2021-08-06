@@ -1,0 +1,11 @@
+version: 2.1
+
+orbs:
+  security: bigcommerce/internal-security@dev:PR-138
+
+workflows:
+  sast-scan:
+    jobs:
+      - security/cx-scan:
+          create_github_comment: false
+          context: Checkmarx Access
